@@ -12,7 +12,7 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
 
     @IBOutlet weak var List: UITableView!
     
-    var array = ["A","B","🤡","C","D","E","F","G","H","I","J","K","L"]
+    var array = ["😈","👹","🤡","🕸","🍄","🍁","🍎","🍿","🌽","🍉","🚗","🚬","🌈"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +31,17 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
         tableViewCell.textLabel?.text = array[indexPath.row]
         return tableViewCell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "DetailView", sender: array[indexPath.row])
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let defVC = segue.destination as! DefinitionViewController
+        defVC.emoji = sender as! String
+    }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
