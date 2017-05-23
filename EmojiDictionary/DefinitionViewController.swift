@@ -14,10 +14,26 @@ class DefinitionViewController: UIViewController {
     
     @IBOutlet weak var definitionLabel: UILabel!
     
-    var emoji = "Sorry"
+    
+    @IBOutlet weak var categoryLabel: UILabel!
+    
+    
+    @IBOutlet weak var originLabel: UILabel!
+    
+     var emoji = Emoji()
+    
+   
+    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
-        emojiLabel.text = emoji
+        emojiLabel.text = emoji.emojiLabel
+        definitionLabel.text = emoji.definitionLabel
+        /*
+ "","👹","🤡","🕸","🍄","🍁","🍎","🍿","🌽","🍉","🚗","🚬","🌈"
+ */
+        
+    
         // Do any additional setup after loading the view.
     }
 

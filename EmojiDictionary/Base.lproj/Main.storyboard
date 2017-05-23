@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="EmojiDictionary" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="EmojiDictionary" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -63,8 +63,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="This is Great Emoji" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YS9-8p-aMW">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is Great Emoji" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YS9-8p-aMW">
                                 <rect key="frame" x="116" y="383" width="142" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category: Smiley" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kMY-7e-NyZ">
+                                <rect key="frame" x="122.5" y="424" width="130" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BirthYear" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pz0-Ox-UKP">
+                                <rect key="frame" x="152" y="465" width="70" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -72,14 +84,23 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="kMY-7e-NyZ" firstAttribute="centerX" secondItem="6pb-3F-jpU" secondAttribute="centerX" id="GYN-WP-sug"/>
                             <constraint firstItem="Cke-P7-ZeJ" firstAttribute="top" secondItem="K1c-BS-Cl9" secondAttribute="bottom" constant="40" id="IK4-AM-NL1"/>
                             <constraint firstItem="Cke-P7-ZeJ" firstAttribute="centerX" secondItem="6pb-3F-jpU" secondAttribute="centerX" id="IlB-mj-WOX"/>
+                            <constraint firstItem="kMY-7e-NyZ" firstAttribute="top" secondItem="YS9-8p-aMW" secondAttribute="bottom" constant="20" id="eOC-wO-c6C"/>
+                            <constraint firstItem="Pz0-Ox-UKP" firstAttribute="centerX" secondItem="6pb-3F-jpU" secondAttribute="centerX" id="nkv-J9-QmG"/>
                             <constraint firstItem="YS9-8p-aMW" firstAttribute="top" secondItem="Cke-P7-ZeJ" secondAttribute="bottom" constant="40" id="oKn-3p-eUw"/>
+                            <constraint firstItem="YS9-8p-aMW" firstAttribute="centerX" secondItem="6pb-3F-jpU" secondAttribute="centerX" id="rcB-xL-dbk"/>
+                            <constraint firstItem="Pz0-Ox-UKP" firstAttribute="top" secondItem="kMY-7e-NyZ" secondAttribute="bottom" constant="20" id="xw3-ko-fKC"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="DefinitionLabel" destination="YS9-8p-aMW" id="qmo-Lw-0Bc"/>
                         <outlet property="EmojiLabel" destination="Cke-P7-ZeJ" id="cVG-iR-Dut"/>
+                        <outlet property="categoryLabel" destination="kMY-7e-NyZ" id="KIe-uE-L2n"/>
+                        <outlet property="definitionLabel" destination="YS9-8p-aMW" id="bNI-EM-kjK"/>
+                        <outlet property="emojiLabel" destination="Cke-P7-ZeJ" id="dbk-Sc-k6W"/>
+                        <outlet property="originLabel" destination="Pz0-Ox-UKP" id="woB-d6-lmX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zl3-8p-dTV" userLabel="First Responder" sceneMemberID="firstResponder"/>
